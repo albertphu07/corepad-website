@@ -1,5 +1,11 @@
 body{
-    background-color:black;
+    background-color:rgb(246, 245, 245);
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+  margin: 10px;
 }
 
 ul {

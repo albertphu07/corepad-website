@@ -1,259 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CorePad | Open Source Macropad</title>
+<title>CorePad - Updates</title>
 
-    <meta name="description" content="Stay updated on the CorePad launch, firmware updates, and DIY kit availability.">
+<style>
 
-    <link rel="stylesheet" href="style.css">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+body{
+
+    min-height:100vh;
+
+    font-family:Inter,Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b0f0d,
+        #151a17
+    );
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+
+/* subtle PCB style background */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    linear-gradient(
+        rgba(100,255,150,.05) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(100,255,150,.05) 1px,
+        transparent 1px
+    );
+
+    background-size:40px 40px;
+
+    opacity:.25;
+
+}
+
+
+
+.card{
+
+    position:relative;
+
+    width:430px;
+
+    padding:40px;
+
+    background:
+    rgba(20,25,22,.9);
+
+    border:
+
+    1px solid #304438;
+
+    border-radius:18px;
+
+
+    box-shadow:
+
+    0 0 50px rgba(50,255,120,.15);
+
+
+    animation:show 1s ease;
+
+}
+
+
+
+@keyframes show{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:none;
+}
+
+}
+
+
+
+.logo{
+
+    color:#63d471;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+}
+
+
+.logo span{
+
+    color:white;
+
+}
+
+
+
+.tag{
+
+    margin-top:8px;
+
+    color:#aaa;
+
+    font-size:14px;
+
+}
+
+
+
+h1{
+
+    margin-top:30px;
+
+    font-size:26px;
+
+}
+
+
+
+p{
+
+    margin-top:12px;
+
+    color:#b5b5b5;
+
+    line-height:1.5;
+
+}
+
+
+
+.countdown{
+
+    margin:30px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+}
+
+
+
+.box{
+
+    flex:1;
+
+    background:#101411;
+
+    border:1px solid #29362d;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+
+
+.box strong{
+
+    display:block;
+
+    color:#63d471;
+
+    font-size:25px;
+
+}
+
+
+
+.box small{
+
+    color:#777;
+
+}
+
+
+
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:20px;
+
+
+    background:#0c100e;
+
+    border:
+
+    1px solid #354438;
+
+
+    color:white;
+
+    border-radius:10px;
+
+    outline:none;
+
+}
+
+
+
+input:focus{
+
+    border-color:#63d471;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+
+    border:none;
+
+    border-radius:10px;
+
+
+    background:#63d471;
+
+    color:#081008;
+
+
+    font-weight:800;
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 25px rgba(99,212,113,.3);
+
+}
+
+
+
+#message{
+
+    display:none;
+
+    margin-top:20px;
+
+    color:#63d471;
+
+    text-align:center;
+
+}
+
+
+
+
+.footer{
+
+    margin-top:25px;
+
+    font-size:12px;
+
+    color:#777;
+
+    text-align:center;
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<div id="particles"></div>
 
-<header>
-
-    <div class="logo">
-        <span class="gold">CORE</span>PAD
-    </div>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#signup">Updates</a>
-        <a href="https://github.com/" target="_blank">GitHub</a>
-    </nav>
-
-</header>
+<div class="card">
 
 
-<section class="hero">
-
-<div class="hero-left">
-
-    <span class="badge">
-        OPEN SOURCE • DIY • MAKERS
-    </span>
-
-    <h1>
-        Build.<br>
-        Customize.<br>
-        Create.
-    </h1>
-
-    <p>
-
-        CorePad is a compact open-source macropad designed
-        for makers, creators, programmers, and keyboard
-        enthusiasts.
-
-        Sign up below to receive launch announcements,
-        firmware updates, and future hardware revisions.
-
-    </p>
-
-    <div class="buttons">
-
-        <a href="#signup" class="primary">
-            Notify Me
-        </a>
-
-        <a href="https://github.com/" class="secondary" target="_blank">
-            View GitHub
-        </a>
-
-    </div>
-
+<div class="logo">
+Core<span>Pad</span>
 </div>
 
 
-<div class="hero-right">
-
-<div class="board-card">
-
-<img
-src="assets/corepad.png"
-alt="CorePad PCB"
-id="pcb">
-
+<div class="tag">
+Open-source macropad for makers & creators
 </div>
 
-</div>
-
-</section>
 
 
+<h1>
+Get launch updates
+</h1>
 
-<section id="about">
-
-<h2>Why CorePad?</h2>
-
-<div class="features">
-
-<div class="feature">
-
-<h3>⚡ Fast</h3>
 
 <p>
-Built around modern microcontrollers with responsive firmware.
+Be the first to know when CorePad kits become available,
+PCB files release, and project updates drop.
 </p>
 
+
+
+<div class="countdown">
+
+<div class="box">
+<strong id="days">0</strong>
+<small>Days</small>
 </div>
 
-<div class="feature">
-
-<h3>🎛 Fully Programmable</h3>
-
-<p>
-Customize every key exactly how you want.
-</p>
-
+<div class="box">
+<strong id="hours">0</strong>
+<small>Hours</small>
 </div>
 
-<div class="feature">
-
-<h3>🔧 DIY Friendly</h3>
-
-<p>
-Perfect for beginners and experienced builders.
-</p>
-
+<div class="box">
+<strong id="minutes">0</strong>
+<small>Minutes</small>
 </div>
 
-<div class="feature">
-
-<h3>❤️ Open Source</h3>
-
-<p>
-Hardware, firmware, and documentation available on GitHub.
-</p>
-
+<div class="box">
+<strong id="seconds">0</strong>
+<small>Seconds</small>
 </div>
 
 </div>
 
-</section>
 
 
+<form id="form">
 
-<section id="timeline">
-
-<h2>Launch Progress</h2>
-
-<div class="timeline">
-
-<div class="step complete">
-<div class="dot"></div>
-<h4>PCB Design</h4>
-<p>Completed</p>
-</div>
-
-<div class="step active">
-<div class="dot"></div>
-<h4>Prototype</h4>
-<p>In Progress</p>
-</div>
-
-<div class="step">
-<div class="dot"></div>
-<h4>Firmware</h4>
-<p>Testing</p>
-</div>
-
-<div class="step">
-<div class="dot"></div>
-<h4>Launch</h4>
-<p>Coming Soon</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="signup">
-
-<div class="signup-card">
-
-<h2>Stay Updated</h2>
-
-<p>
-
-Be the first to know when CorePad launches.
-
-</p>
-
-<form id="signupForm">
-
-<input
+<input 
+id="email"
 type="email"
-placeholder="Enter your email"
+placeholder="you@example.com"
 required
-id="email">
+>
+
 
 <button>
-
 Notify Me
-
 </button>
 
 </form>
 
-<div id="success">
 
-🎉 Thanks!
 
-You're officially on the CorePad update list.
+<div id="message">
+✓ You're on the CorePad update list!
+</div>
+
+
+
+<div class="footer">
+
+Built with open hardware spirit
 
 </div>
 
-</div>
-
-</section>
-
-
-
-<footer>
-
-<div>
-
-<h3>CorePad</h3>
-
-<p>
-
-A small yet powerful open-source macropad.
-
-</p>
 
 </div>
 
-<div>
-
-<a href="https://github.com/" target="_blank">
-GitHub
-</a>
-
-<a href="#">
-Discord
-</a>
-
-</div>
-
-</footer>
 
 
 
-<script src="script.js"></script>
+
+<script>
+
+
+// Change launch date here
+
+const launch =
+new Date("December 1, 2026 00:00:00")
+.getTime();
+
+
+
+function countdown(){
+
+const now =
+Date.now();
+
+
+const distance =
+launch-now;
+
+
+if(distance < 0){
+
+document.getElementById("days").innerHTML="🚀";
+
+return;
+
+}
+
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+
+document.getElementById("hours").innerHTML =
+Math.floor(distance%(1000*60*60*24)/(1000*60*60));
+
+
+document.getElementById("minutes").innerHTML =
+Math.floor(distance%(1000*60*60)/(1000*60));
+
+
+document.getElementById("seconds").innerHTML =
+Math.floor(distance%(1000*60)/1000);
+
+
+}
+
+
+setInterval(countdown,1000);
+
+countdown();
+
+
+
+
+
+document
+.getElementById("form")
+.addEventListener("submit",e=>{
+
+e.preventDefault();
+
+
+const btn =
+e.target.querySelector("button");
+
+
+btn.innerHTML="Joining...";
+
+btn.disabled=true;
+
+
+
+setTimeout(()=>{
+
+
+btn.innerHTML="Joined ✓";
+
+
+document
+.getElementById("message")
+.style.display="block";
+
+
+e.target.reset();
+
+
+},1200);
+
+
+
+});
+
+
+</script>
+
 
 </body>
 </html>

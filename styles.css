@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    background:
+        radial-gradient(circle at top, #222 0%, #050505 60%);
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* Animated background glow */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #00eaff;
+    filter: blur(180px);
+    opacity: .15;
+    top: -100px;
+    left: -100px;
+    animation: moveGlow 8s infinite alternate;
+}
+
+@keyframes moveGlow {
+    from {
+        transform: translate(0,0);
+    }
+
+    to {
+        transform: translate(200px,150px);
+    }
+}
+
+
+.container {
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+
+.card {
+
+    width:420px;
+    padding:40px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 50px rgba(0,234,255,.15);
+
+    text-align:center;
+
+    animation:fadeIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+
+from {
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to {
+    opacity:1;
+    transform:none;
+}
+
+}
+
+
+
+.logo {
+
+font-size:42px;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#00eaff,
+#8b5cff
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+
+
+h1 {
+    margin-top:15px;
+    font-size:30px;
+}
+
+
+p {
+    color:#aaa;
+    margin:15px 0 25px;
+}
+
+
+.countdown {
+
+display:flex;
+justify-content:center;
+gap:12px;
+margin-bottom:30px;
+
+}
+
+
+.time {
+
+background:#111;
+
+padding:12px;
+
+border-radius:12px;
+
+min-width:65px;
+
+border:1px solid #333;
+
+}
+
+
+.time span {
+
+display:block;
+
+font-size:24px;
+
+color:#00eaff;
+
+}
+
+
+
+input {
+
+width:100%;
+
+padding:15px;
+
+border-radius:12px;
+
+border:none;
+
+outline:none;
+
+background:#111;
+
+color:white;
+
+font-family:inherit;
+
+margin-bottom:15px;
+
+}
+
+
+
+button {
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-family:inherit;
+
+font-weight:bold;
+
+font-size:16px;
+
+background:
+linear-gradient(
+90deg,
+#00eaff,
+#8b5cff
+);
+
+color:white;
+
+transition:.3s;
+
+}
+
+
+
+button:hover {
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 30px rgba(0,234,255,.4);
+
+}
+
+
+
+button.loading {
+
+opacity:.6;
+
+pointer-events:none;
+
+}
+
+
+
+#statusMessage {
+
+margin-top:20px;
+
+color:#00ff99;
+
+display:none;
+
+}

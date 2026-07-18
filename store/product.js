@@ -2,11 +2,13 @@ const images = [
 
 "../../images/IMG_7624.png",
 
-"../../images/corepad-side.png",
+"../../images/IMG_7632(1).png",
 
-"../../images/corepad-back.png",
+"../../images/IMG_7632(2).png",
 
-"../../images/corepad-pcb.png"
+"../../images/IMG_7633.png",
+
+"../../images/IMG_7633(1).png",
 
 ];
 

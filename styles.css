@@ -1,36 +1,154 @@
-.nav{
-  font-family: "Geist Pixel", sans-serif;
-  border: 2px solid #dbd8d8;
-  border-radius: 15px;
-  width: 400px;
-  margin: 0 auto;
-  background-color: #efecec;
-  text-align: right;
-  padding: 10px;
-
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.nav a{
-  text-decoration: none;
-  color: black;
-}
-
-.nav a:hover{
-  color: #071a97;
-}
-
 body {
-  background-color: #f4f4f5;
+    background-color: #f4f4f5;
+    margin: 0;
+}
+
+.nav {
+    font-family: "Geist Pixel", sans-serif;
+    border: 2px solid #dbd8d8;
+    border-radius: 15px;
+    width: 400px;
+    background-color: #efecec;
+    padding: 10px;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    color: #071a97;
 }
 
 .nav-logo {
-  width: 40px;
-  height: 40px;
-  padding-right: 80px;
-  object-fit: contain;
+    font-family: "Geist Pixel", sans-serif;
+    font-size: 22px;
+    color: black;
+    white-space: nowrap;
 }
+
+main {
+    padding-top: 120px;
+}
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+    padding: 40px;
+}
+
+.hero-text {
+    font-family: "Geist Pixel", sans-serif;
+    max-width: 450px;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 25px;
+}
+
+.description {
+    color: #555;
+    font-size: 18px !important;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 12px 25px;
+    margin-right: 10px;
+
+    border-radius: 12px;
+    border: 2px solid #dbd8d8;
+
+    background-color: #efecec;
+    color: black;
+
+    text-decoration: none;
+    font-family: "Geist Pixel", sans-serif;
+}
+
+.button:hover {
+    background-color: #071a97;
+    color: white;
+}
+
+.product-box {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 25px;
+    border: 2px solid #dbd8d8;
+
+    background-color: #efecec;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-box img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    width: 250px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+    border: 2px solid #dbd8d8;
+
+    background-color: #efecec;
+
+    font-family: "Geist Pixel", sans-serif;
+}
+
+.HomeFooter {
+    text-align: left;
+
+    padding: 20px;
+
+    background-color: #efecec;
+    border-top: 2px solid #dbd8d8;
+
+    font-family: "Geist Pixel", sans-serif;
+}
+
